@@ -35,10 +35,10 @@ router.post('/', (req, res) => {
 
 // Delete posts
 router.delete('/:id', (req, res) => {
+    Item.findByIdAndDelete(req.params.id, (err) => console.log(err));
+    console.log('Item deleted successfully...')
 
-    Item.findOneAndDelete({
-        _id: req.params.id
-    }, (err) => console.log(err))
+    res.status(200).send();
 });
 
 module.exports = router;
