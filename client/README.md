@@ -1,4 +1,4 @@
-# new name here
+# fullstack-vue-express
 
 ## Project setup
 ```
